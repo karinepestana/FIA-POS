@@ -12,6 +12,8 @@ class Node:
 		self.cima = None
 		self.baixo = None
 		self.data = data
+		self.i = 0
+		self.j = 0
         
 	def insert(self, data):
 		if self.direita is None:
@@ -45,266 +47,68 @@ def busca_zero(m):
 	if i >= size:
 		i = size-1
 	if j >= size:
-		j = size-1
+		j = size-1        
         
-            
-    #Verifica se o 0 está nos cantos(0) ou nas bordas(1) ou no meio(2)
-        
-	if (i == 0):
-		aux = 1
-		if (j == 0) or (j == size-1):
-			s = 0
-		else:
-			s = 1
-	elif i == size-1:
-		if (j == 0) or (j == size-1):
-			s = 0
-		else:
-			s = 1
-	elif (j == 0) or (j == size-1):
-		s = 1
-	else:
-		s = 2           
-        
-	return i,j,s
-
-def embaralha(m):
-	i,j,s = busca_zero(m)
-    #print(i, j, s)
-    #print(m)
-    
-	if s == 0:
-		rand = randint(0,1)
-		if rand == 0:
-			if j == 0:
-				aux = m[i,j+1]
-				m[i,j+1] = 0
-				m[i,j] = aux
-			else:
-				aux = m[i, j-1]
-				m[i, j-1] = 0
-				m[i,j] = aux
-		else:
-			if i == 0:
-				aux = m[i+1,j]
-				m[i+1,j] = 0
-				m[i,j] = aux
-			else:
-				aux = m[i-1, j]
-				m[i-1, j] = 0
-				m[i,j] = aux 
-	elif s == 1:
-		rand = randint(0,2)
-		if rand == 0:
-			if i == 0 or i == size-1:
-                #borda superior ou inferior -> troca com o da direita
-				aux = m[i,j+1]
-				m[i,j+1] = 0
-				m[i,j] = aux
-			else:
-                #borda lateral -> troca com o de baixo
-				aux = m[i+1,j]
-				m[i+1,j] = 0
-				m[i,j] = aux
-		elif rand == 1:
-			if i == 0 or i == size-1:
-                #borda superior ou inferior -> troca com o da esquerda
-				aux = m[i, j-1]
-				m[i, j-1] = 0
-				m[i,j] = aux
-			else:
-                #borda lateral -> troca com o de cima
-                #print(m)
-                #print(i,j,s)
-				aux = m[i-1, j]
-				m[i-1, j] = 0
-				m[i,j] = aux
-		else:
-			if i == 0:
-                #borda superior -> troca com o de baixo
-				aux = m[i+1,j]
-				m[i+1,j] = 0
-				m[i,j] = aux
-			elif i == size-1:
-                #borda inferior -> troca com o de cima
-				aux = m[i-1, j]
-				m[i-1, j] = 0
-				m[i,j] = aux
-			elif j == 0:
-                #borda lateral esquerda -> troca com o do lado direito
-                #print(m)
-                #print(i,j,s)
-				aux = m[i,j+1]
-				m[i,j+1] = 0
-				m[i,j] = aux
-			else:
-                #borda lateral direita -> troca com o do lado esquerdo
-				aux = m[i, j-1]
-				m[i, j-1] = 0
-				m[i,j] = aux
-	else:
-		rand = randint(0,3)
-		if rand == 0:
-			aux = m[i,j+1]
-			m[i,j+1] = 0
-			m[i,j] = aux
-		elif rand == 1:
-			aux = m[i, j-1]
-			m[i, j-1] = 0
-			m[i,j] = aux
-		elif rand == 2:
-			aux = m[i+1,j]
-			m[i+1,j] = 0
-			m[i,j] = aux
-		else:
-			aux = m[i-1, j]
-			m[i-1, j] = 0
-			m[i,j] = aux
-            
-	return m
-
+	return i,j
 def movimento(m):
-	i,j,s = busca_zero(m.data)
+	i = m.i
+	j = m.j
 	saidas = []
 	cont = 0
 	v = 0
-   
-	if s == 0:   
-		cont = 0
-		v = 2
-		for cont in range (0,2):            
-			m_aux = m.data.copy()
-			if cont == 0:
-				if j == 0:
-					aux = m_aux[i,j+1]
-					m_aux[i,j+1] = 0
-					m_aux[i,j] = aux
-				else:
-					aux = m_aux[i, j-1]
-					m_aux[i, j-1] = 0
-					m_aux[i,j] = aux
-                #print("s = 0 cont = 0")
-                #print(m_aux)
-                #print(" ")
-			else:
-				if i == 0:
-					aux = m_aux[i+1,j]
-					m_aux[i+1,j] = 0
-					m_aux[i,j] = aux
-				else:
-					aux = m_aux[i-1, j]
-					m_aux[i-1, j] = 0
-					m_aux[i,j] = aux
-                #print("s = 0 cont = 1")
-                #print(m_aux)
-                #print(" ")
-			m_aux = Node(m_aux)
-			saidas.append(m_aux)
-			m_aux = []            
-            
-	elif s == 1:
-        
-		cont = 0
-		v = 3
-		for cont in range (0,3):
-			m_aux = m.data.copy()
-			if cont == 0:
-				if i == 0 or i == size-1:
-                    #borda superior ou inferior -> troca com_aux o da direita
-					aux = m_aux[i,j+1]
-					m_aux[i,j+1] = 0
-					m_aux[i,j] = aux
-				else:
-                    #borda lateral -> troca com_aux o de baixo
-					aux = m_aux[i+1,j]
-					m_aux[i+1,j] = 0
-					m_aux[i,j] = aux
-                #print("s = 1 cont = 0")
-                #print(m_aux)
-                #print(" ")
-			elif cont == 1:
-				if i == 0 or i == size-1:
-                    #borda superior ou inferior -> troca com_aux o da esquerda
-					aux = m_aux[i, j-1]
-					m_aux[i, j-1] = 0
-					m_aux[i,j] = aux
-				else:
-                    #borda lateral -> troca com_aux o de cim_auxa
-                    #print(m_aux)
-                    #print(i,j,s)
-					aux = m_aux[i-1, j]
-					m_aux[i-1, j] = 0
-					m_aux[i,j] = aux
-                #print("s = 1 cont = 1")
-                #print(m_aux)
-                #print(" ")
-			else:
-				if i == 0:
-                    #borda superior -> troca com_aux o de baixo
-					aux = m_aux[i+1,j]
-					m_aux[i+1,j] = 0
-					m_aux[i,j] = aux
-				elif i == size-1:
-                    #borda inferior -> troca com_aux o de cim_auxa
-					aux = m_aux[i-1, j]
-					m_aux[i-1, j] = 0
-					m_aux[i,j] = aux
-				elif j == 0:
-                    #borda lateral esquerda -> troca com_aux o do lado direito
-                    #print(m_aux)
-                    #print(i,j,s)
-					aux = m_aux[i,j+1]
-					m_aux[i,j+1] = 0
-					m_aux[i,j] = aux
-				else:
-                    #borda lateral direita -> troca com_aux o do lado esquerdo
-					aux = m_aux[i, j-1]
-					m_aux[i, j-1] = 0
-					m_aux[i,j] = aux
-                #print("s = 1 cont = 2")
-                #print(m_aux)
-                #print(" ")
-			m_aux = Node(m_aux)
-			saidas.append(m_aux)
-			m_aux = []
-	else:
-		cont = 0
-		v = 4
-		for cont in range (0,4):
-			m_aux = m.data.copy()
-			if cont == 0:
+
+	for count in range (0,4):
+		m_aux = m.data.copy()
+		if count == 0:
+			if j+1 <= size-1:
 				aux = m_aux[i,j+1]
 				m_aux[i,j+1] = 0
 				m_aux[i,j] = aux
-                #print("s = 2 cont = 0")
-                #print(m_aux)
-                #print(" ")
-			elif cont == 1:
+				#print(m_aux)
+				m_aux = Node(m_aux)
+				m_aux.i = i
+				m_aux.j = j+1
+				saidas.append(m_aux)
+				m_aux = [] 
+				v = v +1
+		elif count == 1:
+			if j-1 >= 0:
 				aux = m_aux[i, j-1]
 				m_aux[i, j-1] = 0
 				m_aux[i,j] = aux
-                #print("s = 2 cont = 1")
-                #print(m_aux)
-                #print(" ")
-			elif cont == 2:
+				#print(m_aux)
+				m_aux = Node(m_aux)
+				m_aux.i = i
+				m_aux.j = j-1
+				saidas.append(m_aux)
+				m_aux = [] 
+				v = v +1	
+		elif count == 2:
+			if i+1 <= size-1:
 				aux = m_aux[i+1,j]
 				m_aux[i+1,j] = 0
 				m_aux[i,j] = aux
-                #print("s = 2 cont = 2")
-                #print(m_aux)
-                #print(" ")
-			else:
+				#print(m_aux)
+				m_aux = Node(m_aux)
+				m_aux.i = i+1
+				m_aux.j = j
+				saidas.append(m_aux)
+				m_aux = [] 
+				v = v +1	
+		elif count == 3:
+			if i-1 >= 0:
 				aux = m_aux[i-1, j]
 				m_aux[i-1, j] = 0
 				m_aux[i,j] = aux
-                #print("s = 2 cont = 3")
-                #print(m_aux)
-                #print(" ")
-			m_aux = Node(m_aux)
-			saidas.append(m_aux)
-			m_aux = []
+				#print(m_aux)
+				m_aux = Node(m_aux)
+				m_aux.i = i-1
+				m_aux.j = j
+				saidas.append(m_aux)
+				m_aux = [] 	
+				v = v +1
             
-	return saidas, v
+	return saidas,v
 
 def acceptable_runtime(start_time, nodos):
 		
@@ -365,7 +169,11 @@ if __name__ == '__main__':
 	nos_abertos = 0
 
 	lista_dados = list()
-	lista_dados.append(Node(m))
+	nodo_inicial = Node(m)
+	a, b = busca_zero(m)
+	nodo_inicial.i = a
+	nodo_inicial.j = b
+	lista_dados.append(nodo_inicial)
 	matriz_embaralhada = m.copy()
 	nos_abertos = nos_abertos +1
 

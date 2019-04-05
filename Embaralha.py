@@ -146,7 +146,8 @@ if __name__ == '__main__':
     size = int(args["dimensao"])
     n = int(args["vezes"])
 
-    m = np.arange(0, size*size, 1).reshape(size, size)
+    m = np.arange(1, size*size+1, 1).reshape(size, size)
+    m[size-1,size-1] = 0
 
     for x in range(0, n):
         embaralha(m)
