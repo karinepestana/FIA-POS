@@ -146,6 +146,8 @@ if __name__ == '__main__':
     size = int(args["dimensao"])
     n = int(args["vezes"])
 
+    print("A matriz foi embaralhada " + str(n) + "vezes\n")
+
     m = np.arange(1, size*size+1, 1).reshape(size, size)
     m[size-1,size-1] = 0
 

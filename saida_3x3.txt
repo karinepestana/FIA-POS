@@ -1,0 +1,342 @@
+A matriz foi embaralhada 30vezes
+
+
+Busca A* com heuristica da contagem das peças erradas
+
+Situação: Busca encontrou solução
+Nós abertos: 703
+Tempo de execução: 0 horas, 0 minutos e 0.10 segundos
+Caminho para encontrar a solução: 
+[[1 2 3]
+ [4 0 8]
+ [7 6 5]]
+[[1 2 3]
+ [4 8 0]
+ [7 6 5]]
+[[1 2 3]
+ [4 8 5]
+ [7 6 0]]
+[[1 2 3]
+ [4 8 5]
+ [7 0 6]]
+[[1 2 3]
+ [4 0 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 0]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca A* com heuristica da distância de Manhatan
+
+Situação: Busca encontrou solução
+Nós abertos: 280
+Tempo de execução: 0 horas, 0 minutos e 0.02 segundos
+Caminho para encontrar a solução: 
+[[1 2 3]
+ [4 0 8]
+ [7 6 5]]
+[[1 2 3]
+ [4 8 0]
+ [7 6 5]]
+[[1 2 3]
+ [4 8 5]
+ [7 6 0]]
+[[1 2 3]
+ [4 8 5]
+ [7 0 6]]
+[[1 2 3]
+ [4 0 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 0]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca em Largura
+
+Situação: Busca encontrou solução
+Nós abertos: 512
+Tempo de execução: 0 horas, 0 minutos e 0.01 segundos
+Caminho para encontrar a solução: 
+[[1 2 3]
+ [4 0 8]
+ [7 6 5]]
+[[1 2 3]
+ [4 8 0]
+ [7 6 5]]
+[[1 2 3]
+ [4 8 5]
+ [7 6 0]]
+[[1 2 3]
+ [4 8 5]
+ [7 0 6]]
+[[1 2 3]
+ [4 0 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 0]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca em Profundidade
+
+Situação: Busca não encontrou solução
+Nós abertos: 700173
+Tempo de execução: 1 horas, 0 minutos e 0.00 segundos
+
+Busca por aprofundamento iterativo
+
+Situação: Busca não encontrou solução
+Nós abertos: 4194304
+Tempo de execução: 2 horas, 8 minutos e 20.60 segundos
+A matriz foi embaralhada 40vezes
+
+
+Busca A* com heuristica da contagem das peças erradas
+
+Situação: Busca encontrou solução
+Nós abertos: 661
+Tempo de execução: 0 horas, 0 minutos e 0.08 segundos
+Caminho para encontrar a solução: 
+[[1 2 3]
+ [7 0 5]
+ [8 4 6]]
+[[1 2 3]
+ [7 4 5]
+ [8 0 6]]
+[[1 2 3]
+ [7 4 5]
+ [0 8 6]]
+[[1 2 3]
+ [0 4 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 0 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 0]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca A* com heuristica da distância de Manhatan
+
+Situação: Busca encontrou solução
+Nós abertos: 265
+Tempo de execução: 0 horas, 0 minutos e 0.02 segundos
+Caminho para encontrar a solução: 
+[[1 2 3]
+ [7 0 5]
+ [8 4 6]]
+[[1 2 3]
+ [7 4 5]
+ [8 0 6]]
+[[1 2 3]
+ [7 4 5]
+ [0 8 6]]
+[[1 2 3]
+ [0 4 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 0 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 0]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca em Largura
+
+Situação: Busca encontrou solução
+Nós abertos: 860
+Tempo de execução: 0 horas, 0 minutos e 0.02 segundos
+Caminho para encontrar a solução: 
+[[1 2 3]
+ [7 0 5]
+ [8 4 6]]
+[[1 2 3]
+ [7 4 5]
+ [8 0 6]]
+[[1 2 3]
+ [7 4 5]
+ [0 8 6]]
+[[1 2 3]
+ [0 4 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 0 5]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 0]
+ [7 8 6]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca em Profundidade
+
+Situação: Busca não encontrou solução
+Nós abertos: 706779
+Tempo de execução: 1 horas, 0 minutos e 0.00 segundos
+
+Busca por aprofundamento iterativo
+
+Situação: Busca não encontrou solução
+Nós abertos: 4194304
+Tempo de execução: 2 horas, 8 minutos e 5.56 segundos
+A matriz foi embaralhada 50vezes
+
+
+Busca A* com heuristica da contagem das peças erradas
+
+Situação: Busca encontrou solução
+Nós abertos: 65229
+Tempo de execução: 0 horas, 14 minutos e 53.16 segundos
+Caminho para encontrar a solução: 
+[[5 1 0]
+ [4 2 3]
+ [7 8 6]]
+[[5 1 3]
+ [4 2 0]
+ [7 8 6]]
+[[5 1 3]
+ [4 2 6]
+ [7 8 0]]
+[[5 1 3]
+ [4 2 6]
+ [7 0 8]]
+[[5 1 3]
+ [4 2 6]
+ [0 7 8]]
+[[5 1 3]
+ [0 2 6]
+ [4 7 8]]
+[[0 1 3]
+ [5 2 6]
+ [4 7 8]]
+[[1 0 3]
+ [5 2 6]
+ [4 7 8]]
+[[1 2 3]
+ [5 0 6]
+ [4 7 8]]
+[[1 2 3]
+ [0 5 6]
+ [4 7 8]]
+[[1 2 3]
+ [4 5 6]
+ [0 7 8]]
+[[1 2 3]
+ [4 5 6]
+ [7 0 8]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca A* com heuristica da distância de Manhatan
+
+Situação: Busca encontrou solução
+Nós abertos: 61212
+Tempo de execução: 0 horas, 11 minutos e 54.42 segundos
+Caminho para encontrar a solução: 
+[[5 1 0]
+ [4 2 3]
+ [7 8 6]]
+[[5 1 3]
+ [4 2 0]
+ [7 8 6]]
+[[5 1 3]
+ [4 2 6]
+ [7 8 0]]
+[[5 1 3]
+ [4 2 6]
+ [7 0 8]]
+[[5 1 3]
+ [4 2 6]
+ [0 7 8]]
+[[5 1 3]
+ [0 2 6]
+ [4 7 8]]
+[[0 1 3]
+ [5 2 6]
+ [4 7 8]]
+[[1 0 3]
+ [5 2 6]
+ [4 7 8]]
+[[1 2 3]
+ [5 0 6]
+ [4 7 8]]
+[[1 2 3]
+ [0 5 6]
+ [4 7 8]]
+[[1 2 3]
+ [4 5 6]
+ [0 7 8]]
+[[1 2 3]
+ [4 5 6]
+ [7 0 8]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca em Largura
+
+Situação: Busca encontrou solução
+Nós abertos: 256335
+Tempo de execução: 0 horas, 0 minutos e 51.61 segundos
+Caminho para encontrar a solução: 
+[[5 1 0]
+ [4 2 3]
+ [7 8 6]]
+[[5 1 3]
+ [4 2 0]
+ [7 8 6]]
+[[5 1 3]
+ [4 2 6]
+ [7 8 0]]
+[[5 1 3]
+ [4 2 6]
+ [7 0 8]]
+[[5 1 3]
+ [4 2 6]
+ [0 7 8]]
+[[5 1 3]
+ [0 2 6]
+ [4 7 8]]
+[[0 1 3]
+ [5 2 6]
+ [4 7 8]]
+[[1 0 3]
+ [5 2 6]
+ [4 7 8]]
+[[1 2 3]
+ [5 0 6]
+ [4 7 8]]
+[[1 2 3]
+ [0 5 6]
+ [4 7 8]]
+[[1 2 3]
+ [4 5 6]
+ [0 7 8]]
+[[1 2 3]
+ [4 5 6]
+ [7 0 8]]
+[[1 2 3]
+ [4 5 6]
+ [7 8 0]]
+
+Busca em Profundidade
+
+Situação: Busca não encontrou solução
+Nós abertos: 1039273
+Tempo de execução: 1 horas, 0 minutos e 0.00 segundos
