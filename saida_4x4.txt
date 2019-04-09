@@ -1,6 +1,5 @@
 A matriz foi embaralhada 30 vezes
 
-
 Busca A* com heuristica da contagem das peças erradas
 
 Situação: Busca encontrou solução
@@ -141,6 +140,8 @@ Busca por aprofundamento iterativo
 Situação: Busca não encontrou solução
 Nós abertos: 4194304
 Tempo de execução: 2 horas, 37 minutos e 40.68 segundos
+
+
 A matriz foi embaralhada 40 vezes
 
 
@@ -167,3 +168,9 @@ Busca em Profundidade
 Situação: Busca não encontrou solução
 Nós abertos: 705031
 Tempo de execução: 1 horas, 0 minutos e 0.01 segundos
+
+Busca por aprofundamento iterativo
+
+Situação: Busca não encontrou solução
+Nós abertos: 4194304
+Tempo de execução: 2 horas, 38 minutos e 0.79 segundos
