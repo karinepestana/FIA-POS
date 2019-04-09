@@ -138,22 +138,27 @@ def busca_zero(m):
 
 if __name__ == '__main__':
     #Le a dimensao (nxn) do jogo
-    ap = argparse.ArgumentParser()
-    ap.add_argument('-d', "--dimensao", required=True, help="Informe o valor da matriz quadrada para o jogo")
-    ap.add_argument('-n', "--vezes", required=True, help="Informe o valor de vezes que a matriz será embaralhada")
-    args = vars(ap.parse_args())    
+	ap = argparse.ArgumentParser()
+	ap.add_argument('-d', "--dimensao", required=True, help="Informe o valor da matriz quadrada para o jogo")
+	ap.add_argument('-n', "--vezes", required=True, help="Informe o valor de vezes que a matriz será embaralhada")
+	args = vars(ap.parse_args())    
     #dimension = int(args["dimensao"])
-    size = int(args["dimensao"])
-    n = int(args["vezes"])
+	size = int(args["dimensao"])
+	n = int(args["vezes"])
 
-    print("A matriz foi embaralhada " + str(n) + "vezes\n")
+	print("A matriz foi embaralhada " + str(n) + " vezes\n")
 
-    m = np.arange(1, size*size+1, 1).reshape(size, size)
-    m[size-1,size-1] = 0
+	m = np.arange(1, size*size+1, 1).reshape(size, size)
+	m[size-1,size-1] = 0
 
-    for x in range(0, n):
-        embaralha(m)
+	for x in range(0, n):
+		embaralha(m)
 
-    ref_arquivo = open("matriz.txt",'w')
-    ref_arquivo.write(str(m))
-    ref_arquivo.close()
+	ref_arquivo = open("matriz.txt",'w')
+
+	for i in range(0,size):
+	 	for j in range(0,size):
+	 		ref_arquivo.write(str(m[i,j]) + "\n")
+	 		ref_arquivo
+    
+	ref_arquivo.close()

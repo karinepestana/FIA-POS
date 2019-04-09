@@ -1,0 +1,6 @@
+
+Busca por aprofundamento iterativo
+
+Situação: Busca não encontrou solução
+Nós abertos: 4194304
+Tempo de execução: 2 horas, 7 minutos e 36.70 segundos

@@ -150,19 +150,13 @@ if __name__ == '__main__':
 	linha = ref_arquivo.readline()
 	valores = []
 	m = np.arange(0, size*size, 1)
-	i = 0
+	c = 0
 
 	while linha:
-		valores = linha.split()
-		m[i] = (int(valores[0][-1:]))
-		m[i+1] = (int(valores[1][-1:]))
-		if i+2 == 8:
-			m[i+2] = int(valores[2][:-2])
-		else:
-			m[i+2] = int(valores[2][:-1])
+		m[c] = int(linha)
+		c =  c +1
 		linha = ref_arquivo.readline()
-		i = i+3
-
+		
 	ref_arquivo.close()
 	m = m.reshape(size, size)
 	#print(type(m))
